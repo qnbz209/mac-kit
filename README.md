@@ -12,9 +12,10 @@ chmod +x setup.sh
 ```
 
 ## Included Tools
-- Homebrew
+- Homebrew (Packages managed declaratively via `Brewfile`)
 - iTerm2
 - Discord
+- Google Gemini & Antigravity (App & CLI)
 - Neovim (with Zenbones light theme & LSP)
 - tmux (configured with prefix Ctrl-a)
 - fzf, ripgrep, fd
@@ -36,7 +37,8 @@ Navigate between Neovim splits and tmux panes using the same keys:
 
 #### Language Support (LSP)
 - `gd` : Go to definition
-- `K`  : Hover documentation
+- `gr` : Go to references (Go to Reference)
+- `<Space> + k` : Hover documentation
 - `<leader>vrn` : Rename symbol
 - `<leader>vca` : Code actions (Quick fix)
 - `Ctrl + n/p`  : Navigate completion menu
