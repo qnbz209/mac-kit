@@ -1,0 +1,6 @@
+[tools]
+node = "latest"
+python = "latest"
+
+[settings]
+legacy_version_file = true
