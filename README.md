@@ -39,7 +39,7 @@ Navigate between Neovim splits and tmux panes using the same keys:
 - `gd` : Go to definition
 - `gr` : Go to references (Go to Reference)
 - `<Space> + k` : Hover documentation
-- `<leader>vrn` : Rename symbol
+- `<Space> + rn` : Rename symbol
 - `<leader>vca` : Code actions (Quick fix)
 - `Ctrl + n/p`  : Navigate completion menu
 - `Ctrl + y`    : Confirm completion
