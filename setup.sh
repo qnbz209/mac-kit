@@ -5,6 +5,9 @@
 
 set -e
 
+# Get the absolute path of the mac-kit directory
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 echo "Starting mac-kit setup..."
 
 # 1. Check for Homebrew and install if not present
@@ -24,11 +27,13 @@ else
 fi
 
 # 2. Install Packages
-echo "Installing Homebrew formulae..."
-brew install neovim fzf tmux mise gh colima docker docker-compose ripgrep fd
-
-echo "Installing Homebrew casks..."
-brew install --cask iterm2 discord google-gemini antigravity font-meslo-lg-nerd-font
+echo "Installing Homebrew packages from Brewfile..."
+if [ -f "$REPO_ROOT/Brewfile" ]; then
+    brew bundle --file="$REPO_ROOT/Brewfile"
+else
+    echo "Error: Brewfile not found at $REPO_ROOT/Brewfile"
+    exit 1
+fi
 
 # 3. Shell Setup (Oh-My-Zsh & Powerlevel10k)
 echo "Setting up Zsh, Oh-My-Zsh, and Powerlevel10k..."
@@ -67,8 +72,7 @@ echo "Setting up configuration symlinks..."
 # Ensure ~/.config directory exists
 mkdir -p "$HOME/.config"
 
-# Get the absolute path of the mac-kit directory
-REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# REPO_ROOT is defined at the top of the script
 
 # Zsh config
 for f in .zshrc .p10k.zsh; do
