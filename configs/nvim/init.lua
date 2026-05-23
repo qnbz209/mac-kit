@@ -32,7 +32,17 @@ require("lazy").setup({
             "nvim-tree/nvim-web-devicons",
         },
         config = function()
-            require("nvim-tree").setup {}
+            local function my_on_attach(bufnr)
+                local api = require("nvim-tree.api")
+                -- Load default mappings
+                api.config.mappings.default_on_attach(bufnr)
+                -- Remove the default C-k mapping so that vim-tmux-navigator's global C-k navigation works inside the tree
+                vim.keymap.del("n", "<C-k>", { buffer = bufnr })
+            end
+
+            require("nvim-tree").setup({
+                on_attach = my_on_attach,
+            })
         end,
     },
 
