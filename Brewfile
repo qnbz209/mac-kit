@@ -14,6 +14,8 @@ brew "docker"
 brew "docker-compose"
 brew "ripgrep"
 brew "fd"
+brew "ghq"
+
 
 # Homebrew Casks
 cask "iterm2"
