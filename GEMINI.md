@@ -1,4 +1,4 @@
-# mac-kit Project Instructions
+# dotfiles Project Instructions
 
 This repository is dedicated to managing and automating the setup of a macOS environment.
 

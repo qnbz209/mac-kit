@@ -1,4 +1,4 @@
-# Brewfile for mac-kit macOS Environment Setup
+# Brewfile for dotfiles macOS Environment Setup
 
 # Tap repositories
 tap "homebrew/bundle"

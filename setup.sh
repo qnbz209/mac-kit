@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# mac-kit setup script
+# dotfiles setup script
 # This script installs Homebrew, packages, and sets up configuration symlinks.
 
 set -e
 
-# Get the absolute path of the mac-kit directory
+# Get the absolute path of the dotfiles directory
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-echo "Starting mac-kit setup..."
+echo "Starting dotfiles setup..."
 
 # 1. Check for Homebrew and install if not present
 if ! command -v brew >/dev/null 2>&1; then

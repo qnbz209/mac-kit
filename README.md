@@ -1,4 +1,4 @@
-# mac-kit
+# dotfiles
 
 Automated macOS setup and configuration management.
 
