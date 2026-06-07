@@ -1,7 +1,5 @@
 # Brewfile for dotfiles macOS Environment Setup
 
-# Tap repositories
-tap "homebrew/bundle"
 
 # Homebrew Formulae
 brew "neovim"
